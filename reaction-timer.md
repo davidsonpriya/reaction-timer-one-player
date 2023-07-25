@@ -396,7 +396,7 @@ input.onPinPressed(TouchPin.P1, function () {
 
 ## Step 30
 Within ``||Logic:else||`` block, add ``||Variable:set bad_start = 0||`` block. 
-From ``||logic:Logic||``, drag ``||Logic:true||`` and snap it to **``0``** in ||Variable:set bad_start||``.
+From ``||logic:Logic||``, drag ``||Logic:true||`` and snap it to **``0``** in ``||Variable:set bad_start||``.
 ```blocks 
 input.onPinPressed(TouchPin.P1, function () {
     if (start_game_timer == true) {
