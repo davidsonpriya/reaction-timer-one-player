@@ -1,6 +1,6 @@
 # Reaction Timer Game
 We will be making a Reaction Timer game. In this game, we will program microbit to measure the time it takes for player to react.
-
+You will not need ``||Basic: on start||`` and ``||Basic: forever||`` blocks so get rid of these.
 ## Step 1
 Under ``||input:Input||``, select ``||Input: on pin P0 pressed||`` block.
 
