@@ -66,7 +66,8 @@ input.onPinPressed(TouchPin.P0, function () {
 })
 ```
 ## Step 7 
-From ``||basic:Basic||``, add ``||Basic: pause (ms) 100||``. Change the value from 100 to 1000
+From ``||basic:Basic||``, add ``||Basic: pause (ms) 100||``. 
+Change the value from 100 to 1 second. It will automatically be converted to 1000
 ```blocks 
 input.onPinPressed(TouchPin.P0, function () {
     bad_start = false
@@ -126,7 +127,7 @@ input.onPinPressed(TouchPin.P0, function () {
 ```
 
 ## Step 11
-From ``||variables: Variables||``, get a ``||variables:set start_game_timer ||``.
+From ``||variables: Variables||``, get ``||variables:set start_game_timer ||`` and place it within ``||Logic:if||`` loop.
 This step will start the game timer.
 
 ```blocks 
@@ -144,7 +145,7 @@ input.onPinPressed(TouchPin.P0, function () {
 
 ## Step 12
 From ``||variables: Variables||``, get a ``||variables:set start_time ||``.
-Also, get ``||input: running time||`` from ``||input:Input||``. 
+Also, get ``||input: running time||`` from ``||input:Input||`` and snap it to **``0``** in ``||variables:set start_time = 0 ||``. 
 This step will record the current time as start time for the game.
 Note" If you can't find ``||input: running time||`` then click on ``||input: Input||`` and
  then on ``||input: More||`` 
