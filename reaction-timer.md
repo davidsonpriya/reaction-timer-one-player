@@ -1,4 +1,4 @@
-# Reaction_Timer
+# Reaction Timer Game
 We will be making a Reaction Timer game. In this game, we will program microbit to measure the time it takes for player to react.
 
 ## Step 1
