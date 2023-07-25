@@ -1,7 +1,7 @@
 # Reaction-Timer
 
 ## Create variable bad_start
-```blocks
+```blocks 
 let bad_start = false
 ```
 
