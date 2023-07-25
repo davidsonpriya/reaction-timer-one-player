@@ -167,7 +167,7 @@ input.onPinPressed(TouchPin.P0, function () {
 
 ## Step 13
 Find ``||LED:plot x() y()||`` block under ``||led:LED||``. 
-Change the values for **``x``** and **``y``**. 
+Change the values for **``x``** and **``y``** to be any number between **``0``** to **``4``**. 
 This will be the position of marker to start the game. 
 
 ```blocks 
