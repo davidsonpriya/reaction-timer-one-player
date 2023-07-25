@@ -2,17 +2,14 @@
     "name": "Reaction Timer - Single",
     "description": "",
     "dependencies": {
-        "core": "*",
-        "radio": "*",
-        "microphone": "*"
+        "core": "*"
     },
     "files": [
         "main.blocks",
         "main.ts",
         "README.md",
         "main.py",
-        "reaction-timer.md",
-        "_locales/en-GB/reaction-timer.md"
+        "reaction-timer.md"
     ],
     "testFiles": [
         "test.ts"
