@@ -237,7 +237,7 @@ input.onPinPressed(TouchPin.P1, function () {
 ```
 
 ## Step 19
-Add ``||variables: set end_time||`` block for marking the end time for game. 
+Make a new variable ``||variables: end_time||``. Add ``||variables: set end_time||`` block to record the end time for game. 
 from ``||input:Input||``, add ``||Input:running time||``. Remember, you can also search for the blocks you can't locate easily.
 ```blocks 
 input.onPinPressed(TouchPin.P1, function () {
@@ -259,7 +259,7 @@ input.onPinPressed(TouchPin.P1, function () {
 ```
 
 ## Step 21
-Next add, ``||Basic: pause (ms) 100||`` and ``||Basic: clear screen||``. 
+Next add, ``||Basic: pause (ms) 100||`` and then ``||Basic: clear screen||``. 
 ```blocks 
 input.onPinPressed(TouchPin.P1, function () {
     if (start_game_timer == true) {
@@ -287,7 +287,7 @@ input.onPinPressed(TouchPin.P1, function () {
 ```
 
 ## Step 23
-From ``||math:Math||``, get the calculate block ``||math: 0 + 0||``.
+From ``||math:Math||``, get the calculate block ``||math: 0 / 0||``.
 
 ```blocks 
 input.onPinPressed(TouchPin.P1, function () {
@@ -296,7 +296,7 @@ input.onPinPressed(TouchPin.P1, function () {
         basic.showIcon(IconNames.Yes)
         basic.pause(100)
         basic.clearScreen()
-        Reaction_Time = 0 + 0
+        Reaction_Time = 0 / 0
     }
 })
 ```
@@ -304,7 +304,7 @@ input.onPinPressed(TouchPin.P1, function () {
 
 
 ## Step 24
-Change the **``+``** to **``/``** for division and value of the second 0 to 1000
+Change the value of the second 0 to 1000
 ```blocks 
 input.onPinPressed(TouchPin.P1, function () {
     if (start_game_timer == true) {
@@ -318,7 +318,7 @@ input.onPinPressed(TouchPin.P1, function () {
 ```
 
 ## Step 25
-Drag a second calculate block ``||math: 0 + 0||`` and snap it to the first **``0``**. 
+Drag a second calculate block ``||math: 0 - 0||`` and snap it to the first **``0``**. 
 ```blocks 
 input.onPinPressed(TouchPin.P1, function () {
     if (start_game_timer == true) {
@@ -326,7 +326,7 @@ input.onPinPressed(TouchPin.P1, function () {
         basic.showIcon(IconNames.Yes)
         basic.pause(100)
         basic.clearScreen()
-        Reaction_Time = (0 + 0) / 1000
+        Reaction_Time = (0 - 0) / 1000
         
     }
 })
