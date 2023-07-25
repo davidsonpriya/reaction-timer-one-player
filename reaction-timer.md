@@ -2,7 +2,7 @@
 We will be making a Reaction Timer game. In this game, we will program microbit to measure the time it takes for player to react.
 
 ## Step 1
-Under ``||Input||``, select ``||Input: on pin P0 pressed||`` block.
+Under ``||input:Input||``, select ``||Input: on pin P0 pressed||`` block.
 
 ```blocks 
 input.onPinPressed(TouchPin.P0, function () {
@@ -10,7 +10,8 @@ input.onPinPressed(TouchPin.P0, function () {
 ```
 
 ## Step 2
-Under ``||Variables||``, select ``||Variables:Make a Variable||``. Enter the variable name as ``bad_start``. Add a ``||Variable:Set bad_start to||`` block to your code.
+Under ``||Variables||``, select ``||Variables:Make a Variable||``. 
+Enter the variable name as **``bad_start``**. Add a ``||Variable:Set bad_start to||`` block to your code.
 
 ```blocks 
 input.onPinPressed(TouchPin.P0, function () {
@@ -19,7 +20,7 @@ input.onPinPressed(TouchPin.P0, function () {
 ```
 
 ## Step 3
-From ``||Logic||``, bring the ``||Logic:False||`` block and snap it instead of 0.
+From ``||logic:Logic||``, bring the ``||Logic:False||`` block and snap it instead of 0.
 
 ```blocks 
 input.onPinPressed(TouchPin.P0, function () {
@@ -28,9 +29,9 @@ input.onPinPressed(TouchPin.P0, function () {
 ```
 
 ## Step 4
-Make another ``||Variable||`` and name it as ``start_game_timer``. 
-Bring ``||Variable:set start_game_timer||`` and add it to your code. 
-Again, from ``||Logic||`` bring the ``||Logic:False||`` block and place it instead of 0.
+Make another ``||variable:Variable||`` and name it as **``start_game_timer``**. 
+Bring ``||Variables:set start_game_timer||`` and add it to your code. 
+Again, from ``||logic:Logic||`` bring the ``||Logic:False||`` block and place it instead of 0.
 
 ```blocks 
 input.onPinPressed(TouchPin.P0, function () {
@@ -40,7 +41,7 @@ input.onPinPressed(TouchPin.P0, function () {
 ```
 
 ## Step 5
-From ``||Basic||``, add ``||Basic: show icon||``. 
+From ``||basic:Basic||``, add ``||Basic: show icon||``. 
 Select a Heart or any other image to signal the start of the game.
 
 ```blocks 
@@ -53,7 +54,7 @@ input.onPinPressed(TouchPin.P0, function () {
 ```
 
 ## Step 6
-From **Basic**, add ``clearScreen``.
+From ``||basic:Basic||``, add ``||Basic: clear screen||``.
 
 ```blocks 
 input.onPinPressed(TouchPin.P0, function () {
@@ -64,7 +65,8 @@ input.onPinPressed(TouchPin.P0, function () {
     
 })
 ```
-## From **Basic**, add ``pause``. Change the value from 100 to 1000
+## Step 7 
+From ``||basic:Basic||``, add ``||Basic: pause (ms) 100||``. Change the value from 100 to 1000
 ```blocks 
 input.onPinPressed(TouchPin.P0, function () {
     bad_start = false
@@ -76,8 +78,8 @@ input.onPinPressed(TouchPin.P0, function () {
 })
 ```
 
-## Step 7
-Under **Logic**, find ``if`` block and add it after ``pause``.
+## Step 8
+Under ``||logic:Logic||``, find ``||logic: if-True-then||`` block and add it after ``||basic: pause (ms) 1000||``.
 ```blocks 
 input.onPinPressed(TouchPin.P0, function () {
     bad_start = false
@@ -91,8 +93,8 @@ input.onPinPressed(TouchPin.P0, function () {
 })
 ```
 
-## Step 8
-Add a comparison block and place it instead of ``True`` .
+## Step 9
+From ``||logic:Logic||``, get a comparison block ``||logic: 0 = 0 ||`` and snap it to replace ``||logic:True||`` within the ``||Logic: if||`` block.
 ```blocks 
 input.onPinPressed(TouchPin.P0, function () {
     bad_start = false
@@ -105,7 +107,8 @@ input.onPinPressed(TouchPin.P0, function () {
     }
 })
 ```
-## Drag ``bad_start`` from Variables and ``True`` from Logic.
+## Step 10
+From ``||variables:Variables||``, drag ``||Variables:bad_start||`` and from ``||logic:Logic||``, drag ``||logic:True||`` into the comparison block.
 ```blocks 
 input.onPinPressed(TouchPin.P0, function () {
     bad_start = false
@@ -119,8 +122,30 @@ input.onPinPressed(TouchPin.P0, function () {
 })
 ```
 
-## Step 9
-Add a ``set`` block from variable to set values for starting the game timer and take the start time for the game.
+## Step 11
+From ``||variables: Variables||``, get a ``||variables:set start_game_timer ||``.
+This step will start the game timer.
+
+```blocks 
+input.onPinPressed(TouchPin.P0, function () {
+    bad_start = false
+    start_game_timer = false
+    basic.showIcon(IconNames.Heart)
+    basic.clearScreen()
+    basic.pause(1000)
+    if (bad_start != true) {
+        start_game_timer = true
+    }
+})
+```
+
+## Step 12
+From ``||variables: Variables||``, get a ``||variables:set start_time ||``.
+Also, get ``||input: running time||`` from ``||input:Input||``. 
+This step will record the current time as start time for the game.
+Note" If you can't find ``||input: running time||`` then click on ``||input: Input||`` and
+ then on ``||input: More||`` 
+
 
 ```blocks 
 input.onPinPressed(TouchPin.P0, function () {
@@ -136,7 +161,7 @@ input.onPinPressed(TouchPin.P0, function () {
 })
 ```
 
-## Step 10
+## Step 13
 find ``plot x() y()`` block under LED. Change the values for x and y. This will be the position of LED that will light up for for dot marker. 
 
 ```blocks 
@@ -154,7 +179,7 @@ input.onPinPressed(TouchPin.P0, function () {
 })
 ```
 
-## Step 11
+## Step 14
 Add ``on pin pressed`` block again. Change the pin ``P0`` to ``P1``.
 
 ```blocks 
@@ -163,7 +188,7 @@ input.onPinPressed(TouchPin.P1, function () {
 })
 ```
 
-## Step 12
+## Step 15
 Add ``if block`` from Logic. Add a ``comparison`` block from Math and place it instead of ``True``
 ```blocks 
 input.onPinPressed(TouchPin.P1, function () {
@@ -173,7 +198,7 @@ input.onPinPressed(TouchPin.P1, function () {
 })
 ```
 
-## Step 13
+## Step 16
 From ``Logic``, drag ``True`` and place it instead of 0
 ```blocks 
 input.onPinPressed(TouchPin.P1, function () {
@@ -183,7 +208,7 @@ input.onPinPressed(TouchPin.P1, function () {
 })
 ```
 
-## Step 14
+## Step 17
 Add ``set`` block for marking the end time for game. Add ``running time`` from ``Input`` menu item. You can also search for the blocks you can't locate easily.
 ```blocks 
 input.onPinPressed(TouchPin.P1, function () {
@@ -193,7 +218,7 @@ input.onPinPressed(TouchPin.P1, function () {
 })
 ```
 
-## Step 15
+## Step 18
 Add ``showIcon`` and select a tick to represent good start.
 ```blocks 
 input.onPinPressed(TouchPin.P1, function () {
@@ -204,7 +229,7 @@ input.onPinPressed(TouchPin.P1, function () {
 })
 ```
 
-## Step 16
+## Step 19
 Next add, pause and clear screen. 
 ```blocks 
 input.onPinPressed(TouchPin.P1, function () {
@@ -217,7 +242,7 @@ input.onPinPressed(TouchPin.P1, function () {
 })
 ```
 
-## Step 17
+## Step 20
 Next, we need to calculate the reaction time. Make a variable ``Reaction_time``. Use ``set`` block to get started.
 ```blocks 
 input.onPinPressed(TouchPin.P1, function () {
@@ -231,7 +256,7 @@ input.onPinPressed(TouchPin.P1, function () {
 })
 ```
 
-## Step 18
+## Step 21
 Drag the ``calculate`` block out and change the operator to ``/`` for division and value to 1000
 ```blocks 
 input.onPinPressed(TouchPin.P1, function () {
@@ -245,7 +270,7 @@ input.onPinPressed(TouchPin.P1, function () {
 })
 ```
 
-## Step 18
+## Step 22
 Drag another ``calculate`` block and snap it instead of ``0``. From **Variables**, bring ``end_time`` and ``start_time``. See the image to check out how it needs to be done.
 ```blocks 
 input.onPinPressed(TouchPin.P1, function () {
@@ -260,7 +285,7 @@ input.onPinPressed(TouchPin.P1, function () {
 })
 ```
 
-## Step 19
+## Step 23
 Display the reaction time. Use ``showNumber`` and from **Variables** snap ``reaction_Time`` to replace the ``0``.
 ```blocks 
 input.onPinPressed(TouchPin.P1, function () {
@@ -275,7 +300,7 @@ input.onPinPressed(TouchPin.P1, function () {
 })
 ```
 
-## Step 20
+## Step 24
 Click on the ``+`` at the end of ``if`` block. An additional ``else`` will appear.
 ```blocks 
 input.onPinPressed(TouchPin.P1, function () {
@@ -291,7 +316,7 @@ input.onPinPressed(TouchPin.P1, function () {
 })
 ```
 
-## Step 21
+## Step 25
 Within ``else`` block, add ``set`` block and select bad_start. Drag out ``True`` from **Logic** and snap it to set_start.
 ```blocks 
 input.onPinPressed(TouchPin.P1, function () {
@@ -308,7 +333,7 @@ input.onPinPressed(TouchPin.P1, function () {
 })
 ```
 
-## Step 22
+## Step 26
 Add ``showIcon`` for displaying a bad start. You can select a X or any other symbol for this.
 ```blocks 
 input.onPinPressed(TouchPin.P1, function () {
