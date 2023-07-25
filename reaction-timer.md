@@ -1,13 +1,15 @@
 # Reaction_Timer
 ## We will be making a Reaction Timer game that will measure the time it takes for player to react.
 
-## Under **Input**, select `on pin P0 pressed` block.
+## Under ||input||, select ``on pin P0 pressed`` block.
+
 ```blocks 
 input.onPinPressed(TouchPin.P0, function () {
 })
 ```
 
-## Under **Variables** select **Make a Variable**. Enter the variable name as ``bad_start``. Add ``Set bad_start`` block to your code.
+## Select ||Variables:Make a Variable||. Enter the variable name as ``bad_start``. Add ``Set bad_start`` block to your code.
+
 ```blocks 
 input.onPinPressed(TouchPin.P0, function () {
     bad_start = 0
@@ -15,6 +17,7 @@ input.onPinPressed(TouchPin.P0, function () {
 ```
 
 ## From Logic, bring the ``False`` block and snap it instead of 0.
+
 ```blocks 
 input.onPinPressed(TouchPin.P0, function () {
     bad_start = false
@@ -40,6 +43,7 @@ input.onPinPressed(TouchPin.P0, function () {
 ```
 
 ## From **Basic**, add ``clearScreen``.
+
 ```blocks 
 input.onPinPressed(TouchPin.P0, function () {
     bad_start = false
@@ -103,6 +107,7 @@ input.onPinPressed(TouchPin.P0, function () {
 ```
 
 ## Add a ``set`` block from variable to set values for starting the game timer and take the start time for the game.
+
 ```blocks 
 input.onPinPressed(TouchPin.P0, function () {
     bad_start = false
@@ -116,7 +121,9 @@ input.onPinPressed(TouchPin.P0, function () {
     }
 })
 ```
+
 ## find ``plot x() y()`` block under LED. Change the values for x and y. This will be the position of LED that will light up for for dot marker. 
+
 ```blocks 
 input.onPinPressed(TouchPin.P0, function () {
     bad_start = false
@@ -133,6 +140,7 @@ input.onPinPressed(TouchPin.P0, function () {
 ```
 
 ## Add ``on pin pressed`` block again. Change the pin ``P0`` to ``P1``.
+
 ```blocks 
 input.onPinPressed(TouchPin.P1, function () {
    
