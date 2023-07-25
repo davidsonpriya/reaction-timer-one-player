@@ -28,7 +28,7 @@ input.onPinPressed(TouchPin.P0, function () {
     
 })
 ```
-## From menu item **Basic**, add ``showIcon``. Select a Heart or any other image to signal the start of the game.
+## From **Basic**, add ``showIcon``. Select a Heart or any other image to signal the start of the game.
 ```blocks 
 input.onPinPressed(TouchPin.P0, function () {
     bad_start = false
@@ -87,7 +87,7 @@ input.onPinPressed(TouchPin.P0, function () {
     }
 })
 ```
-## Bring ``bad_start`` from Variables and ``True`` from Logic.
+## Drag ``bad_start`` from Variables and ``True`` from Logic.
 ```blocks 
 input.onPinPressed(TouchPin.P0, function () {
     bad_start = false
@@ -101,7 +101,7 @@ input.onPinPressed(TouchPin.P0, function () {
 })
 ```
 
-## Add ``set`` block from variable to set values for starting the game timer and take the start time for the game.
+## Add a ``set`` block from variable to set values for starting the game timer and take the start time for the game.
 ```blocks 
 input.onPinPressed(TouchPin.P0, function () {
     bad_start = false
