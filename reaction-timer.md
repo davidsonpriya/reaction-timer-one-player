@@ -1,6 +1,7 @@
 # Reaction_Timer
+## We will be making a Reaction Timer game that will measure the time it takes for player to react.
 
-## Under **Input**, select ``on pin P0 pressed`` block.
+## Under **Input**, select `on pin P0 pressed` block.
 ```blocks 
 input.onPinPressed(TouchPin.P0, function () {
 })
