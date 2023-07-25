@@ -2,7 +2,7 @@
 We will be making a Reaction Timer game. In this game, we will program microbit to measure the time it takes for player to react.
 
 ## Step 1
-Under ``||input||``, select ``||on pin P0 pressed||`` block.
+Under ``||Input||``, select ``||Input: on pin P0 pressed||`` block.
 
 ```blocks 
 input.onPinPressed(TouchPin.P0, function () {
@@ -10,7 +10,7 @@ input.onPinPressed(TouchPin.P0, function () {
 ```
 
 ## Step 2
-Select ``||Variables:Make a Variable||``. Enter the variable name as ``bad_start``. Add a ``Set bad_start`` block to your code.
+Under ``||Variables||``, select ``||Variables:Make a Variable||``. Enter the variable name as ``bad_start``. Add a ``||Variable:Set bad_start to||`` block to your code.
 
 ```blocks 
 input.onPinPressed(TouchPin.P0, function () {
@@ -19,7 +19,7 @@ input.onPinPressed(TouchPin.P0, function () {
 ```
 
 ## Step 3
-From Logic, bring the ``||Logic:False||`` block and snap it instead of 0.
+From ``||Logic||``, bring the ``||Logic:False||`` block and snap it instead of 0.
 
 ```blocks 
 input.onPinPressed(TouchPin.P0, function () {
@@ -28,16 +28,21 @@ input.onPinPressed(TouchPin.P0, function () {
 ```
 
 ## Step 4
-Make another variable and name it as ``start_game_timer``. Bring set start_game_timer and add it to your code. Again, bring the ``False`` block and place it instead of 0.
+Make another ``||Variable||`` and name it as ``start_game_timer``. 
+Bring ``||Variable:set start_game_timer||`` and add it to your code. 
+Again, from ``||Logic||`` bring the ``||Logic:False||`` block and place it instead of 0.
+
 ```blocks 
 input.onPinPressed(TouchPin.P0, function () {
     bad_start = false
     start_game_timer = false
-    
 })
 ```
+
 ## Step 5
-From **Basic**, add ``showIcon``. Select a Heart or any other image to signal the start of the game.
+From ``||Basic||``, add ``||Basic: show icon||``. 
+Select a Heart or any other image to signal the start of the game.
+
 ```blocks 
 input.onPinPressed(TouchPin.P0, function () {
     bad_start = false
