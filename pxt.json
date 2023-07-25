@@ -10,7 +10,9 @@
         "main.blocks",
         "main.ts",
         "README.md",
-        "main.py"
+        "main.py",
+        "reaction-timer.md",
+        "_locales/en-GB/reaction-timer.md"
     ],
     "testFiles": [
         "test.ts"
