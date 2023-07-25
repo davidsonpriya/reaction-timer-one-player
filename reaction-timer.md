@@ -2,7 +2,7 @@
 We will be making a Reaction Timer game. In this game, we will program microbit to measure the time it takes for player to react.
 
 ## Step 1
-Under ||input||, select ``on pin P0 pressed`` block.
+Under ``||input||``, select ``||on pin P0 pressed||`` block.
 
 ```blocks 
 input.onPinPressed(TouchPin.P0, function () {
@@ -10,7 +10,7 @@ input.onPinPressed(TouchPin.P0, function () {
 ```
 
 ## Step 2
-Select ||Variables:Make a Variable||. Enter the variable name as ``bad_start``. Add a ``Set bad_start`` block to your code.
+Select ``||Variables:Make a Variable||``. Enter the variable name as ``bad_start``. Add a ``Set bad_start`` block to your code.
 
 ```blocks 
 input.onPinPressed(TouchPin.P0, function () {
@@ -19,7 +19,7 @@ input.onPinPressed(TouchPin.P0, function () {
 ```
 
 ## Step 3
-From Logic, bring the ``False`` block and snap it instead of 0.
+From Logic, bring the ``||Logic:False||`` block and snap it instead of 0.
 
 ```blocks 
 input.onPinPressed(TouchPin.P0, function () {
