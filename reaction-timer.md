@@ -2,5 +2,5 @@
 
 ## Create variable bad_start
 ```blocks 
-let bad_start = false
+let bad_start = false 
 ```
