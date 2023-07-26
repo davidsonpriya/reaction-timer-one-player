@@ -11,7 +11,7 @@ input.onPinPressed(TouchPin.P0, function () {
 
 ## Step 2
 Under ``||Variables||``, select ``||Variables:Make a Variable||``. 
-Enter the variable name as **``bad_start``**. Add a ``||Variable:Set bad_start to||`` block to your code.
+Enter the variable name as **``bad_start``**. Add a ``||Variable:Set bad_start to||`` block within ``||Input: on pin P0 pressed||`` block.
 
 ```blocks 
 input.onPinPressed(TouchPin.P0, function () {
@@ -30,7 +30,7 @@ input.onPinPressed(TouchPin.P0, function () {
 
 ## Step 4
 Make another ``||variable:Variable||`` and name it as **``start_game_timer``**. 
-Bring ``||Variables:set start_game_timer||`` and add it to your code. 
+Bring ``||Variables:set start_game_timer||`` and add it below ``||Variable:Set bad_start to||`` block. 
 Again, from ``||logic:Logic||`` bring the ``||Logic:False||`` block and place it instead of 0.
 
 ```blocks 
@@ -67,7 +67,7 @@ input.onPinPressed(TouchPin.P0, function () {
 ```
 ## Step 7 
 From ``||basic:Basic||``, add ``||Basic: pause (ms) 100||``. 
-Change the value from 100 to 1 second. It will automatically be converted to 1000
+Change the value from 100 to 1 second. It will be automatically converted to 1000
 ```blocks 
 input.onPinPressed(TouchPin.P0, function () {
     bad_start = false
@@ -80,7 +80,7 @@ input.onPinPressed(TouchPin.P0, function () {
 ```
 
 ## Step 8
-Under ``||logic:Logic||``, find ``||logic: if-True-then||`` block and add it after ``||basic: pause (ms) 1000||``.
+Under ``||logic:Logic||``, find ``||logic: if-true-then||`` block and add it after ``||basic: pause (ms) 1000||``.
 ```blocks 
 input.onPinPressed(TouchPin.P0, function () {
     bad_start = false
@@ -112,7 +112,7 @@ input.onPinPressed(TouchPin.P0, function () {
 ```
 ## Step 10
 From ``||variables:Variables||``, drag ``||Variables:bad_start||`` and then
-from ``||logic:Logic||``, drag ``||logic:true||`` into the comparison block.
+from ``||logic:Logic||``, drag ``||logic:false||`` into the comparison block.
 ```blocks 
 input.onPinPressed(TouchPin.P0, function () {
     bad_start = false
@@ -120,7 +120,7 @@ input.onPinPressed(TouchPin.P0, function () {
     basic.showIcon(IconNames.Heart)
     basic.clearScreen()
     basic.pause(1000)
-    if (bad_start != true) {
+    if (bad_start == false) {
         
     }
 })
@@ -137,7 +137,7 @@ input.onPinPressed(TouchPin.P0, function () {
     basic.showIcon(IconNames.Heart)
     basic.clearScreen()
     basic.pause(1000)
-    if (bad_start != true) {
+    if (bad_start == false) {
         start_game_timer = true
     }
 })
@@ -158,7 +158,7 @@ input.onPinPressed(TouchPin.P0, function () {
     basic.showIcon(IconNames.Heart)
     basic.clearScreen()
     basic.pause(1000)
-    if (bad_start != true) {
+    if (bad_start == false) {
         start_game_timer = true
         start_time = input.runningTime()
     }
@@ -177,7 +177,7 @@ input.onPinPressed(TouchPin.P0, function () {
     basic.showIcon(IconNames.Heart)
     basic.clearScreen()
     basic.pause(1000)
-    if (bad_start != true) {
+    if (bad_start == false) {
         start_game_timer = true
         start_time = input.runningTime()
         led.plot(2, 2)
