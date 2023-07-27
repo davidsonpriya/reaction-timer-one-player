@@ -1,4 +1,5 @@
 # Reaction Timer Game
+## Reaction Timer Game
 We will be making a Reaction Timer game. In this game, we will program microbit to measure the time it takes for player to react.
 You will not need ``||Basic: on start||`` and ``||Basic: forever||`` blocks so get rid of these.
 ## Step 1
@@ -144,10 +145,9 @@ input.onPinPressed(TouchPin.P0, function () {
 ```
 
 ## Step 12
-From ``||variables: Variables||``, get a ``||variables:set start_time ||``.
+``||variables: Make a new variable`` **``start_time``**. Get ``||variables:set start_time ||``.
 Also, get ``||input: running time||`` from ``||input:Input||`` and snap it to **``0``** in ``||variables:set start_time = 0 ||``. 
-This step will record the current time as start time for the game.
-Note" If you can't find ``||input: running time||`` then click on ``||input: Input||`` and
+If you can't find ``||input: running time||`` then click on ``||input: Input||`` and
  then on ``||input: More||`` 
 
 
